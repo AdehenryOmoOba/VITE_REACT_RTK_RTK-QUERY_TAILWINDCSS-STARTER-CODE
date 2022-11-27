@@ -2,7 +2,7 @@ import { Route,Routes } from "react-router-dom"
 import Header from "./components/Header"
 import SideNav from "./components/SideNav"
 import About from "./Pages/About"
-import Blogs from "./Pages/Blogs"
+import Students from "./Pages/Students"
 import Home from "./Pages/Home"
 import { useSelector } from 'react-redux'
 
@@ -14,11 +14,13 @@ function App() {
         <Header />
         <div className="flex w-full justify-between h-auto">
         <SideNav />
+        <div className="w-[90%] grid items-center">
         <Routes>
           <Route path="/" element={<Home />}/>
           <Route path="/about" element={<About />}/>
-          <Route path="/blogs" element={<Blogs />}/>
+          <Route path="/blogs" element={<Students />}/>
         </Routes>
+        </div>
         </div>
       </main>
   )

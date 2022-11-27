@@ -1,0 +1,84 @@
+ {
+"students" : [{
+    "id": 1,
+    "first_name": "Griffith",
+    "last_name": "Sexon",
+    "email": "gsexon0@facebook.com",
+    "gender": "Male",
+    "age": 53,
+    "address": "3298 Cody Hill"
+  }, {
+    "id": 2,
+    "first_name": "Amery",
+    "last_name": "Goodinson",
+    "email": "agoodinson1@loc.gov",
+    "gender": "Male",
+    "age": 22,
+    "address": "75128 Melody Drive"
+  }, {
+    "id": 3,
+    "first_name": "Erick",
+    "last_name": "Callear",
+    "email": "ecallear2@free.fr",
+    "gender": "Male",
+    "age": 38,
+    "address": "828 Hermina Street"
+  }, {
+    "id": 4,
+    "first_name": "Wandis",
+    "last_name": "Loukes",
+    "email": "wloukes3@independent.co.uk",
+    "gender": "Female",
+    "age": 20,
+    "address": "7 Gateway Place"
+  }, {
+    "id": 5,
+    "first_name": "Minta",
+    "last_name": "Meneghi",
+    "email": "mmeneghi4@mlb.com",
+    "gender": "Female",
+    "age": 58,
+    "address": "97 Milwaukee Hill"
+  }, {
+    "id": 6,
+    "first_name": "Alfy",
+    "last_name": "Kirton",
+    "email": "akirton5@icq.com",
+    "gender": "Female",
+    "age": 16,
+    "address": "56398 West Alley"
+  }, {
+    "id": 7,
+    "first_name": "Brittney",
+    "last_name": "Beldum",
+    "email": "bbeldum6@twitter.com",
+    "gender": "Female",
+    "age": 20,
+    "address": "22 Stephen Trail"
+  }, {
+    "id": 8,
+    "first_name": "Smith",
+    "last_name": "Pendock",
+    "email": "spendock7@msu.edu",
+    "gender": "Male",
+    "age": 43,
+    "address": "5348 Ridgeway Street"
+  }, {
+    "id": 9,
+    "first_name": "Giorgia",
+    "last_name": "Charteris",
+    "email": "gcharteris8@google.com.br",
+    "gender": "Female",
+    "age": 25,
+    "address": "8567 Warrior Plaza"
+  }, {
+    "id": 10,
+    "first_name": "Obidiah",
+    "last_name": "Titta",
+    "email": "otitta9@ftc.gov",
+    "gender": "Male",
+    "age": 57,
+    "address": "146 Stang Road"
+  }],
+"favoriteStudents": []
+}
