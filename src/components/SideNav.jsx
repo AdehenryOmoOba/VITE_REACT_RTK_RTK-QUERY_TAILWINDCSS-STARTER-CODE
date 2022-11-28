@@ -8,7 +8,7 @@ function SideNav() {
         <ul>
           <Link to="/"  className="grid cursor-pointer my-10 border-gray-400 border py-2 px-4 rounded-full bg-black hover:bg-slate-800 text-sm place-items-center">Home</Link>
           <Link to="/about"  className="grid cursor-pointer my-10 border-gray-400 border py-2 px-4 rounded-full bg-black hover:bg-slate-800 text-sm place-items-center">About</Link>
-          <Link to="/blogs"  className="grid cursor-pointer my-10 border-gray-400 border py-2 px-4 rounded-full bg-black hover:bg-slate-800 text-sm place-items-center">Students</Link>
+          <Link to="/students"  className="grid cursor-pointer my-10 border-gray-400 border py-2 px-4 rounded-full bg-black hover:bg-slate-800 text-sm place-items-center">Students</Link>
         </ul>
       </div>
     )

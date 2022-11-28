@@ -5,6 +5,8 @@ import About from "./Pages/About"
 import Students from "./Pages/Students"
 import Home from "./Pages/Home"
 import { useSelector } from 'react-redux'
+import StudentDetails from "./Pages/StudentDetails"
+
 
 function App() {
    const {homeBgColor} = useSelector((state) => state.themeReducer)
@@ -18,7 +20,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />}/>
           <Route path="/about" element={<About />}/>
-          <Route path="/blogs" element={<Students />}/>
+          <Route path="/students" element={<Students />}/>
+          <Route path="/students/:id" element={<StudentDetails />}/>
         </Routes>
         </div>
         </div>
