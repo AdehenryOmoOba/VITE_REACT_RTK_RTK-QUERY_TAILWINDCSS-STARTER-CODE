@@ -6,9 +6,10 @@ import Students from "./Pages/Students"
 import Home from "./Pages/Home"
 import { useSelector } from 'react-redux'
 import StudentDetails from "./Pages/StudentDetails"
-
+import FormModal from "./components/FormModal"
 
 function App() {
+  const isOpen = useSelector((state) => state.modalReducer)
    const {homeBgColor} = useSelector((state) => state.themeReducer)
 
    return (
@@ -25,6 +26,7 @@ function App() {
         </Routes>
         </div>
         </div>
+        {isOpen && <FormModal />} 
       </main>
   )
 }
