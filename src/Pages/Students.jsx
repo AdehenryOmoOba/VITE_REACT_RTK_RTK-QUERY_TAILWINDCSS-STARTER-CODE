@@ -2,13 +2,12 @@ import React from 'react'
 import Card from '../components/Card'
 import { useGetallStudentsQuery } from '../rtk-query/features/studentsSlice'
 import { MdAdd } from "react-icons/md"
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { openModal } from '../rtk/features/modal/modalSlice'
 import { resetStudentDetails } from '../rtk/features/editStudent/editStudentSlice'
 
 function Students() {
   const {data,isFetching,isError} = useGetallStudentsQuery()
-  const isOpen = useSelector((state) => state.modalReducer)
   const dispatch = useDispatch()
 
   const handleAddStudent = () => {

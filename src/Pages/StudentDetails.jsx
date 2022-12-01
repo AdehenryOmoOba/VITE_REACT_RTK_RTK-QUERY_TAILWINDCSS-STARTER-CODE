@@ -1,13 +1,17 @@
 import React from 'react'
-import { useLocation, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import Card from '../components/Card'
+import { useGetStudentQuery } from '../rtk-query/features/studentsSlice'
+
+
 
 function StudentDetails() {
-  const {state} = useLocation()
+  const {id} = useParams()
+  const {data} = useGetStudentQuery(id)
 
     return (
             <div className='w-full md:w-2/3'>
-               <Card data={state} details/>
+               <Card data={data} details/>
             </div>
     )
 }

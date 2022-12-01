@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
+import { useUpdateStudentMutation,useAddStudentMutation } from '../rtk-query/features/studentsSlice'
 import { closeModal } from '../rtk/features/modal/modalSlice'
+import {v4 as uuid} from "uuid"
 
 function Form({data}) {
   const dispatch = useDispatch()
@@ -9,11 +11,22 @@ function Form({data}) {
   const [email, setEmail] = useState(data?.email || "")
   const [gender, setGender] = useState(data?.gender || "")
   const [address, setAddress] = useState(data?.address || "")
+  const [age, setAge] = useState(data?.age || "")
+  const [updateStudent]=  useUpdateStudentMutation()
+  const [addStudent]=  useAddStudentMutation()
 
+  const uniqueID = uuid().slice(0,8)
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    console.log({firstName, lastName,email,gender,address})
+
+    const dataKeys = Object.keys(data)
+
+   if(dataKeys.length)  await updateStudent({id: data.id, first_name:firstName, last_name:lastName, email, gender, address, age})
+
+   if (!dataKeys.length)  await addStudent({first_name: firstName, last_name:lastName,email,gender,address,age, id: uniqueID})
+
+     dispatch(closeModal())
   }
 
     return (
@@ -39,15 +52,24 @@ function Form({data}) {
                     </label>
                     <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-blue-400 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-blue-500" id="grid-email" type="email" placeholder="example@gmail.com" value={email} onChange={(e) => setEmail(e.target.value)} />
                   </div>
+
+                  <div className="w-full mb-6 px-3">
+                    <label className="block uppercase tracking-wide text-blue-700 text-xs font-bold mb-2" htmlFor="grid-age">
+                     Age
+                    </label>
+                    <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-blue-400 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-blue-500" id="grid-age" type="text" placeholder="25" value={age} onChange={(e) => setAge(e.target.value)} />
+                  </div>
+
                   <div className="w-full mb-6 px-3">
                      <label className="block uppercase tracking-wide text-blue-700 text-xs font-bold mb-2" htmlFor="grid-gender">
                      Gender
                      </label>
                      <div className="relative">
                        <select className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-gender" value={gender} onChange={(e) => setGender(e.target.value)}>
-                         <option value="male">Male</option>
-                         <option value="female">Female</option>
-                         <option value="prefer not to say">Prefer Not To Say</option>
+                         <option value={gender ? gender: ""}>{gender ? gender : "Select Gender"}</option>
+                         <option value="Male">Male</option>
+                         <option value="Female">Female</option>
+                         <option value="Prefer not to say">Prefer Not To Say</option>
                        </select>
                        <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
                         <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
