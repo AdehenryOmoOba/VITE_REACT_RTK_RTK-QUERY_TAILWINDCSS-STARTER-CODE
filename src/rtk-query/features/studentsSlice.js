@@ -24,7 +24,7 @@ const studentsApi = createApi({
             }),
             updateFavoriteStudent: builder.mutation({
                 query: ({id, ...rest}) => ({url : `/students/${id}`, method: "PUT", body: rest}),
-                // invalidatesTags: ["Student"]
+                invalidatesTags: ["Student"]
             }),
             deleteStudent: builder.mutation({
                 query: (id) => ({url : `/students/${id}`, method: "DELETE"}),

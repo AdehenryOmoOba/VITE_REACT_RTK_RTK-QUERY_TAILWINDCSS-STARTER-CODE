@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Card from '../components/Card'
 import { useGetallStudentsQuery } from '../rtk-query/features/studentsSlice'
 import { MdAdd } from "react-icons/md"
@@ -7,8 +7,12 @@ import { openModal } from '../rtk/features/modal/modalSlice'
 import { resetStudentDetails } from '../rtk/features/editStudent/editStudentSlice'
 
 function Students() {
-  const {data,isFetching,isError} = useGetallStudentsQuery()
+  const {data,isFetching,isError,refetch} = useGetallStudentsQuery()
   const dispatch = useDispatch()
+  
+  useEffect(() => {
+    refetch()
+  },[])
 
   const handleAddStudent = () => {
     dispatch(resetStudentDetails())

@@ -1,13 +1,13 @@
 {
   "students": [
     {
-      "first_name": "Lilly",
+      "first_name": "Lilliana",
       "last_name": "Goodinson",
       "email": "agoodinson1@loc.gov",
       "gender": "Male",
       "address": "75128 Melody Drive",
       "age": "20",
-      "favorite": "true",
+      "favorite": "false",
       "id": "e984cfe1"
     },
     {
@@ -37,7 +37,7 @@
       "gender": "Female",
       "address": "97 Milwaukee Hill",
       "age": "41",
-      "favorite": "true",
+      "favorite": "false",
       "id": "8d3ca66c"
     },
     {
@@ -71,14 +71,14 @@
       "id": "620a5cf3"
     },
     {
-      "id": "aea20ef9",
       "first_name": "Giorgia",
       "last_name": "Charteris",
       "email": "gcharteris8@google.com.br",
-      "gender": "Female",
-      "age": 25,
+      "gender": "Male",
       "address": "8567 Warrior Plaza",
-      "favorite": "false"
+      "age": "25",
+      "favorite": "false",
+      "id": "aea20ef9"
     },
     {
       "first_name": "Obidiah",
@@ -87,7 +87,7 @@
       "gender": "Male",
       "address": "146 Stang Road",
       "age": "12",
-      "favorite": "false",
+      "favorite": "true",
       "id": "72839393"
     },
     {
@@ -97,7 +97,7 @@
       "gender": "Male",
       "address": "71 Ifelodun Sreet, Oke-Awere Area, Owode-Ede, Osun State.",
       "age": "45",
-      "favorite": "true",
+      "favorite": "false",
       "id": "a2a8311c"
     }
   ],

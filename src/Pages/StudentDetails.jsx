@@ -7,7 +7,11 @@ import { useGetStudentQuery } from '../rtk-query/features/studentsSlice'
 
 function StudentDetails() {
   const {id} = useParams()
-  const {data} = useGetStudentQuery(id)
+  const {data,isFetching} = useGetStudentQuery(id)
+
+  console.log({data})
+
+  if(isFetching) return  <div className='w-full md:w-2/3'><h3>Loading...</h3></div>
 
     return (
             <div className='w-full md:w-2/3'>
